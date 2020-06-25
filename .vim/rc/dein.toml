@@ -1,0 +1,47 @@
+# Required:
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+# lightline
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+hook_add = '''
+    let g:lightline = {'colorscheme': 'nord',}
+'''
+
+# deoplete
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add = '''
+    let g:deoplete#enable_at_startup = 1
+    let g:deoplete#enable_ignore_case = 1
+    let g:deoplete#enable_smart_case = 1
+'''
+
+# deoplete on vim requires plugin 1/2
+[[plugins]]
+repo = 'roxma/nvim-yarp'
+
+# deoplete on vim requires plugin 2/2
+[[plugins]]
+repo = 'roxma/vim-hug-neovim-rpc'
+
+# deoplete python completion sources
+[[plugins]]
+repo = 'deoplete-plugins/deoplete-jedi'
+hook_add = '''
+    " Shows docstring in preview window. Default: 0
+    let g:deoplete#sources#jedi#show_docstring = 1
+    " Set the Python interpreter path to use for the completion server. It defaults to "python", i.e. the first available python in $PATH. Note: This is different from Neovim's Python (:python) in general.
+    let g:deoplete#sources#jedi#python_path = "/usr/local/bin/python3"
+     " Sets the maximum length of completion description text. If this is exceeded, a simple description is used instead. Default: 50
+    let g:deoplete#sources#jedi#statement_length = 50
+    " Enables type information of completions. If you disable it, you will get the faster results. Default: 1
+    let g:deoplete#sources#jedi#enable_typeinfo = 1
+   " A list of extra paths to add to sys.path when performing completions.
+    " let g:deoplete#sources#jedi#extra_path 
+    " Ignore jedi errors for completions. Default: 0
+    " g:deoplete#sources#jedi#ignore_errors
+    " Ignore private members from completions. Default: 0
+    " g:deoplete#sources#jedi#ignore_private_members
+'''

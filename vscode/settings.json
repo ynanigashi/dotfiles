@@ -1,0 +1,6 @@
+{
+    "editor.renderWhitespace": "boundary",
+    "editor.fontSize": 18,
+    "editor.fontFamily": "Ritcty,Menlo, Monaco, 'Courier New', monospace",
+    "workbench.colorTheme": "Solarized Dark"
+}
